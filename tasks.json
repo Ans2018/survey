@@ -1,0 +1,128 @@
+[
+  {
+    "context": "ContextA",
+    "task_id": 1,
+    "profiles": [
+      {
+        "Color": "Blue",
+        "Size": "Small",
+        "Price": 10
+      },
+      {
+        "Color": "Red",
+        "Size": "Large",
+        "Price": 10
+      },
+      {
+        "Color": "Red",
+        "Size": "Medium",
+        "Price": 30
+      }
+    ]
+  },
+  {
+    "context": "ContextA",
+    "task_id": 2,
+    "profiles": [
+      {
+        "Color": "Green",
+        "Size": "Medium",
+        "Price": 20
+      },
+      {
+        "Color": "Red",
+        "Size": "Small",
+        "Price": 20
+      },
+      {
+        "Color": "Blue",
+        "Size": "Small",
+        "Price": 20
+      }
+    ]
+  },
+  {
+    "context": "ContextA",
+    "task_id": 3,
+    "profiles": [
+      {
+        "Color": "Red",
+        "Size": "Large",
+        "Price": 30
+      },
+      {
+        "Color": "Green",
+        "Size": "Medium",
+        "Price": 30
+      },
+      {
+        "Color": "Red",
+        "Size": "Small",
+        "Price": 20
+      }
+    ]
+  },
+  {
+    "context": "ContextB",
+    "task_id": 1,
+    "profiles": [
+      {
+        "Color": "Blue",
+        "Warranty": "2 years",
+        "Price": 25
+      },
+      {
+        "Color": "Red",
+        "Warranty": "2 years",
+        "Price": 25
+      },
+      {
+        "Color": "Red",
+        "Warranty": "2 years",
+        "Price": 25
+      }
+    ]
+  },
+  {
+    "context": "ContextB",
+    "task_id": 2,
+    "profiles": [
+      {
+        "Color": "Red",
+        "Warranty": "1 year",
+        "Price": 25
+      },
+      {
+        "Color": "Red",
+        "Warranty": "2 years",
+        "Price": 25
+      },
+      {
+        "Color": "Blue",
+        "Warranty": "1 year",
+        "Price": 25
+      }
+    ]
+  },
+  {
+    "context": "ContextB",
+    "task_id": 3,
+    "profiles": [
+      {
+        "Color": "Red",
+        "Warranty": "2 years",
+        "Price": 25
+      },
+      {
+        "Color": "Red",
+        "Warranty": "1 year",
+        "Price": 15
+      },
+      {
+        "Color": "Red",
+        "Warranty": "2 years",
+        "Price": 25
+      }
+    ]
+  }
+]
