@@ -19,136 +19,35 @@
 <script>
 const appsScriptUrl = "https://script.google.com/macros/s/AKfycbyimGFCIyYVBHTHb6rAmr2Xh6pgrAm2_BkOlHfRw1FgM2Irf8GmV-6UlG2ZUcS6FCfU/exec";
 
-// Paste your generated tasks.json below:
+// Your predefined tasks (example)
 const tasks = [
-  [
   {
     "context": "ContextA",
     "task_id": 1,
     "profiles": [
-      {
-        "Color": "Blue",
-        "Size": "Small",
-        "Price": 10
-      },
-      {
-        "Color": "Red",
-        "Size": "Large",
-        "Price": 10
-      },
-      {
-        "Color": "Red",
-        "Size": "Medium",
-        "Price": 30
-      }
+      {"Color": "Blue", "Size": "Small", "Price": 10},
+      {"Color": "Red", "Size": "Large", "Price": 10},
+      {"Color": "Red", "Size": "Medium", "Price": 30}
     ]
   },
   {
     "context": "ContextA",
     "task_id": 2,
     "profiles": [
-      {
-        "Color": "Green",
-        "Size": "Medium",
-        "Price": 20
-      },
-      {
-        "Color": "Red",
-        "Size": "Small",
-        "Price": 20
-      },
-      {
-        "Color": "Blue",
-        "Size": "Small",
-        "Price": 20
-      }
-    ]
-  },
-  {
-    "context": "ContextA",
-    "task_id": 3,
-    "profiles": [
-      {
-        "Color": "Red",
-        "Size": "Large",
-        "Price": 30
-      },
-      {
-        "Color": "Green",
-        "Size": "Medium",
-        "Price": 30
-      },
-      {
-        "Color": "Red",
-        "Size": "Small",
-        "Price": 20
-      }
+      {"Color": "Green", "Size": "Medium", "Price": 20},
+      {"Color": "Red", "Size": "Small", "Price": 20},
+      {"Color": "Blue", "Size": "Small", "Price": 20}
     ]
   },
   {
     "context": "ContextB",
     "task_id": 1,
     "profiles": [
-      {
-        "Color": "Blue",
-        "Warranty": "2 years",
-        "Price": 25
-      },
-      {
-        "Color": "Red",
-        "Warranty": "2 years",
-        "Price": 25
-      },
-      {
-        "Color": "Red",
-        "Warranty": "2 years",
-        "Price": 25
-      }
-    ]
-  },
-  {
-    "context": "ContextB",
-    "task_id": 2,
-    "profiles": [
-      {
-        "Color": "Red",
-        "Warranty": "1 year",
-        "Price": 25
-      },
-      {
-        "Color": "Red",
-        "Warranty": "2 years",
-        "Price": 25
-      },
-      {
-        "Color": "Blue",
-        "Warranty": "1 year",
-        "Price": 25
-      }
-    ]
-  },
-  {
-    "context": "ContextB",
-    "task_id": 3,
-    "profiles": [
-      {
-        "Color": "Red",
-        "Warranty": "2 years",
-        "Price": 25
-      },
-      {
-        "Color": "Red",
-        "Warranty": "1 year",
-        "Price": 15
-      },
-      {
-        "Color": "Red",
-        "Warranty": "2 years",
-        "Price": 25
-      }
+      {"Color": "Blue", "Warranty": "2 years", "Price": 25},
+      {"Color": "Red", "Warranty": "2 years", "Price": 25},
+      {"Color": "Red", "Warranty": "2 years", "Price": 25}
     ]
   }
-]
 ];
 
 let currentTaskIndex = 0;
@@ -183,42 +82,8 @@ document.getElementById('next-btn').onclick = () => {
     return;
   }
 
+  // Push response
   responses.push({
-    respondent_id: "R001",
+    respondent_id: "R001",  // You can modify this or prompt user for ID if needed
     context: tasks[currentTaskIndex].context,
-    task_id: tasks[currentTaskIndex].task_id,
-    choice: tasks[currentTaskIndex].profiles[parseInt(selected.value)]
-  });
-
-  currentTaskIndex++;
-
-  if (currentTaskIndex < tasks.length) {
-    renderTask(tasks[currentTaskIndex]);
-  } else {
-    submitResponses();
-  }
-};
-
-function submitResponses() {
-  fetch(appsScriptUrl, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({responses})
-  }).then(res => res.json())
-    .then(data => {
-      if(data.status === "success") {
-        document.getElementById('survey-container').style.display = "none";
-        document.getElementById('next-btn').style.display = "none";
-        document.getElementById('thankyou').style.display = "block";
-      } else {
-        alert("Error submitting survey: " + data.message);
-      }
-    })
-    .catch(err => alert("Failed to submit: " + err.message));
-}
-
-// Start survey
-renderTask(tasks[currentTaskIndex]);
-</script>
-</body>
-</html>
+    task_id: tasks_
